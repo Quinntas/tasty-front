@@ -1,8 +1,8 @@
-import {PageBox} from "@/app/_components/page-box";
 import Link from "next/link";
 import {SignupForm} from "@/app/signup/_components/signup-form";
 import {Suspense} from "react";
 import type {Metadata} from "next";
+import {PageBox} from "@/app/_components/page-box";
 
 export const metadata: Metadata = {
     title: "Signup",

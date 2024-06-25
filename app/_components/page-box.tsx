@@ -1,4 +1,5 @@
 import {cn} from "@/lib/utils";
+import {Box} from "@/app/_components/box";
 
 interface PageBoxProps {
     className?: string;
@@ -6,8 +7,8 @@ interface PageBoxProps {
 }
 
 export function PageBox(props: PageBoxProps) {
-    return <div
-        className={cn("px-[20px] sm:px-[20%] pb-[20px] pt-[20px] sm:pt-[50px] flex justify-between flex-col sm:gap-[20px]", props.className)}>
+    return <Box
+        className={cn("p-[15px] flex flex-col gap-[20px]", props.className)}>
         {props.children}
-    </div>
+    </Box>
 }

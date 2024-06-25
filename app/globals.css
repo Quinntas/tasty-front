@@ -77,11 +77,8 @@
         background-size: 24px 24px;
     }
 
-    .no-scrollbar::-webkit-scrollbar {
-        display: none;
-    }
-
     .no-scrollbar {
+        display: none;
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
     }
