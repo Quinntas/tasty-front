@@ -32,11 +32,12 @@ export function ComboBoxResponsive(props: ComboBoxResponsiveProps) {
         props.defaultValue || null
     )
 
+    // TODO
     if (isDesktop) {
         return (
             <Popover open={open} onOpenChange={setOpen}>
                 <PopoverTrigger asChild>
-                    <Button variant="outline" className={cn(
+                    <Button variant="default" className={cn(
                         "justify-start",
                         props.fill ? "w-full" : ""
                     )}>
@@ -59,10 +60,11 @@ export function ComboBoxResponsive(props: ComboBoxResponsiveProps) {
         )
     }
 
+    // TODO
     return (
         <Drawer open={open} onOpenChange={setOpen}>
             <DrawerTrigger asChild>
-                <Button variant="outline" className={cn(
+                <Button variant="default" className={cn(
                     "justify-start",
                     props.fill ? "w-full" : ""
                 )}>

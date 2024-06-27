@@ -7,6 +7,7 @@ export type QueryStateParams = Record<string, string>;
 
 export interface UseQueryStateProps<T extends QueryStateParams> {
     defaults: Partial<T>;
+    onChange?: () => void;
 }
 
 export function useQueryState<T extends QueryStateParams>(props: UseQueryStateProps<T>) {
@@ -31,6 +32,7 @@ export function useQueryState<T extends QueryStateParams>(props: UseQueryStatePr
             }
         });
         window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
+        props.onChange?.()
     }, [queryState, searchParams]);
 
     return {

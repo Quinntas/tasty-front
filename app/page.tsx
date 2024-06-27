@@ -1,9 +1,10 @@
 import {Box} from "@/app/_components/box";
-import {Car, Clock2, MapPin, MoveRight, Pizza, Settings2, Star} from "lucide-react";
+import {Car, Clock2, MapPin, MoveRight, Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
 import {PageBox} from "@/app/_components/page-box";
 import Image from "next/image";
+import {Filters} from "@/app/_components/filters/filters";
+import {SidePanel} from "@/app/_components/side-panel/side-panel";
 
 export default function Home() {
     return <>
@@ -13,44 +14,12 @@ export default function Home() {
                     <MapPin size={20}/>
                 </Button>
 
-                <span className={"text-md font-semibold"}>Av Jose Trajano de Sousa, 525</span>
+                <span className={"text-[16px] font-semibold"}>Av Jose Trajano de Sousa, 525</span>
 
-                <Button size={"icon"}>
-                    <Settings2 size={20}/>
-                </Button>
+                <SidePanel/>
             </Box>
 
-            <Input
-                placeholder={"Place, Food or Brand"}
-            />
-
-            <Box
-                className={"flex items-center gap-[25px] w-full py-1 overflow-x-auto no-scrollbar overflow-y-none"}>
-                <Button size={"icon"}>
-                    <Pizza size={20}/>
-                </Button>
-                <Button size={"icon"} variant={"neutral"}>
-                    <Pizza size={20}/>
-                </Button>
-                <Button size={"icon"} variant={"neutral"}>
-                    <Pizza size={20}/>
-                </Button>
-                <Button size={"icon"} variant={"neutral"}>
-                    <Pizza size={20}/>
-                </Button>
-                <Button size={"icon"} variant={"neutral"}>
-                    <Pizza size={20}/>
-                </Button>
-                <Button size={"icon"} variant={"neutral"}>
-                    <Pizza size={20}/>
-                </Button>
-                <Button size={"icon"} variant={"neutral"}>
-                    <Pizza size={20}/>
-                </Button>
-                <Button size={"icon"} variant={"neutral"}>
-                    <Pizza size={20}/>
-                </Button>
-            </Box>
+            <Filters/>
 
             <Box className={"flex flex-col gap-[20px]"}>
                 <Box className={"flex items-center justify-between"}>
