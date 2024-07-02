@@ -6,19 +6,19 @@ import Image from "next/image";
 import {Filters} from "@/app/_components/filters/filters";
 import {SidePanel} from "@/app/_components/side-panel/side-panel";
 import {Location} from "@/app/_components/location/location";
+import {Suspense} from "react";
 
 export default function Home() {
     return <>
         <PageBox>
             <Box className={"flex items-center justify-between gap-1"}>
                 <Location/>
-
-                <span className={"text-[16px] font-semibold"}>Av Jose Trajano de Sousa, 525</span>
-
                 <SidePanel/>
             </Box>
 
-            <Filters/>
+            <Suspense>
+                <Filters/>
+            </Suspense>
 
             <Box className={"flex flex-col gap-[20px]"}>
                 <Box className={"flex items-center justify-between"}>

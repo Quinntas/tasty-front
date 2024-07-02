@@ -1,56 +1,63 @@
 "use client"
+
 import {Button} from '@/components/ui/button'
-import {Drawer, DrawerContent, DrawerTrigger,} from '@/components/ui/drawer'
-import {MapPin} from "lucide-react";
+import {ChevronDown, Home, Menu, PlusCircle} from "lucide-react";
 import {Box} from "@/app/_components/box";
+import {Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger} from "@/components/ui/sheet";
 import {Input} from "@/components/ui/input";
-import {Checkbox} from "@/components/ui/checkbox";
+import {NewLocationForm} from "@/app/_components/location/new-location-form";
+import {Drawer, DrawerContent, DrawerTrigger} from "@/components/ui/drawer";
 
 interface LocationProps {
 }
 
 export function Location(props: LocationProps) {
-    const a = {
-        vehicle: "WHATSAPP",
-        data: {
-            type: 'SIMPLE',
-            phone: '96984112103',
-            text: 'Hello World',
-            delay: 0,
-        }
-    }
-
-    console.log(JSON.stringify(a))
-
-    return <Drawer>
-        <DrawerTrigger asChild>
-            <Button size={"icon"} variant={"link"}>
-                <MapPin size={20}/>
+    return <Sheet>
+        <SheetTrigger asChild>
+            <Button variant={"link"} className={"gap-1 p-0"}>
+                <span className={"text-[16px] font-semibold"}>Av Jose Trajano de Sousa, 525</span>
+                <ChevronDown size={20}/>
             </Button>
-        </DrawerTrigger>
-        <DrawerContent>
-            <Box className={"w-full mx-auto font-normal p-[10px]"}>
-                <Box className={"bg-orange-400 w-full h-[200px] flex items-center justify-center"}>
-                    <span>map here</span>
-                </Box>
-                <Box>
-                    <Box className={"flex flex-col gap-1"}>
-                        <span className={"font-semibold text-lg"}>Av. Jose Trajano de Sousa, 525</span>
-                        <span>Beirol, Macapa - AP</span>
-                    </Box>
+        </SheetTrigger>
+        <SheetContent side={"bottom"} className={"p-[10px] h-full flex flex-col gap-[15px]"}>
+            <SheetTitle>DELIVERY ADDRESS</SheetTitle>
 
-                    <Input placeholder={"Number *"} required={true}/>
-                    <Checkbox/>
-                    <span>Address without number</span>
+            <Input placeholder={"Street, number"}/>
 
-                    <Input placeholder={"Complement *"} required={true}/>
-                    <Checkbox/>
-                    <span>Address without complement</span>
+            <Drawer>
+                <DrawerTrigger asChild>
+                    <Button className={"flex items-center justify-between h-fit py-3 px-0"} variant={"neutral"}>
+                        <Button variant={"link"} className={"flex items-center gap-[15px]"}>
+                            <PlusCircle size={20}/>
 
+                            <Box className={"flex gap-1 flex-col text-left text-sm font-normal"}>
+                                <span>Use current location</span>
+                                <span>Av. Jose Trajano - Santa Ines, Macapa - AP</span>
+                            </Box>
+                        </Button>
+                    </Button>
+                </DrawerTrigger>
+                <DrawerContent>
+                    <NewLocationForm/>
+                </DrawerContent>
+            </Drawer>
 
-                    <Input placeholder={"Reference point (optional)"} required={false}/>
-                </Box>
+            <Box className={"flex items-center justify-between w-full h-fit py-3 rounded border "}>
+                <SheetClose asChild>
+                    <Button variant={"link"} className={"flex items-center gap-[15px]"}>
+                        <Home size={20}/>
+
+                        <Box className={"flex gap-1 flex-col text-left text-sm font-normal"}>
+                            <span>Av. Jose Trajano de Sousa, 525</span>
+                            <span>Santa Ines, Macapa - AP</span>
+                        </Box>
+                    </Button>
+                </SheetClose>
+
+                <Button variant={"link"} size={"icon"}>
+                    <Menu size={20}/>
+                </Button>
             </Box>
-        </DrawerContent>
-    </Drawer>
+        </SheetContent>
+    </Sheet>
 }
