@@ -5,3 +5,4 @@ export interface User extends InferSelectModel<typeof userTable> {
 
 }
 
+

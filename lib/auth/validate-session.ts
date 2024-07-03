@@ -15,7 +15,9 @@ export const validateSession = cache(async () => {
         };
 
     const res = await db
-        .select()
+        .select({
+            user: userTable
+        })
         .from(sessionTable)
         .where(eq(sessionTable.pid, sessionPid.value))
         .innerJoin(userTable, eq(sessionTable.userId, userTable.id))
@@ -26,6 +28,6 @@ export const validateSession = cache(async () => {
         }
 
     return {
-        user: res[0].users,
+        user: res[0].user,
     };
 });
