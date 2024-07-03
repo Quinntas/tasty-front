@@ -20,7 +20,8 @@ export function SignupForm() {
     const form = useForm<z.infer<typeof signupSchema>>({
         resolver: zodResolver(signupSchema),
         defaultValues: {
-            username: "",
+            name: "",
+            phone: "",
             email: "",
             password: "",
             passwordConfirmation: "",
@@ -57,12 +58,26 @@ export function SignupForm() {
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-[15px]">
                     <FormField
                         control={form.control}
-                        name="username"
+                        name={"name"}
                         render={({field}) => (
                             <FormItem>
-                                <FormLabel>Username</FormLabel>
+                                <FormLabel>Name</FormLabel>
                                 <FormControl>
                                     <Input placeholder="John Doe" disabled={isLoading} {...field} />
+                                </FormControl>
+                                <FormMessage/>
+                            </FormItem>
+                        )}
+                    />
+
+                    <FormField
+                        control={form.control}
+                        name={"phone"}
+                        render={({field}) => (
+                            <FormItem>
+                                <FormLabel>Phone</FormLabel>
+                                <FormControl>
+                                    <Input placeholder="96984112103" disabled={isLoading} {...field} />
                                 </FormControl>
                                 <FormMessage/>
                             </FormItem>
@@ -111,7 +126,8 @@ export function SignupForm() {
                             </FormItem>
                         )}
                     />
-                    <Button type="submit" disabled={isLoading}>Submit</Button>
+                    
+                    <Button type="submit" disabled={isLoading} className={"w-full"}>Create account</Button>
                 </form>
             </Form>
         </CardContent>

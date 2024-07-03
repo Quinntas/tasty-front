@@ -1,9 +1,7 @@
-import pg from 'pg';
-import {drizzle} from 'drizzle-orm/node-postgres';
+import {drizzle} from 'drizzle-orm/postgres-js';
 import * as schema from './tables';
+import postgres from "postgres";
 
-const pool = new pg.Pool({
-    connectionString: process.env.POSTGRES_URL,
-});
+const client = postgres(process.env.POSTGRES_URL!, {prepare: false})
 
-export const db = drizzle(pool, {schema});
+export const db = drizzle(client, {schema});

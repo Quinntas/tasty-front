@@ -5,13 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/auth/_actions/logout-action.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/auth/validate-session.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/types/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/location/location.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/location/location.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/carousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/pagination.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/toast.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/toast.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/_actions/login-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/_actions/login-action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/_components/login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/_components/login-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/signup/_actions/signup-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/signup/_actions/signup-action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/signup/_components/signup-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/signup/_components/signup-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/signup/_components/signup-schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/signup/_components/signup-schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/drizzle.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/database/connection.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/database/connection.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/database/lucia-drizzle-adapter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/database/tables.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/database/tables.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lucia/_actions/logout-action.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lucia/lucia.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lucia/validate-session.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +107,9 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\quintas\Documents\Gitpica\nextjs-template\app\signup\_components" />
       <recent name="C:\Users\quintas\Documents\Gitpica\nextjs-template\app\login\_components" />
@@ -136,7 +150,8 @@
       <workItem from="1719858992379" duration="59000" />
       <workItem from="1719859079704" duration="151000" />
       <workItem from="1719859329875" duration="297000" />
-      <workItem from="1719942749570" duration="5939000" />
+      <workItem from="1719942749570" duration="6333000" />
+      <workItem from="1720030884084" duration="4553000" />
     </task>
     <servers />
   </component>

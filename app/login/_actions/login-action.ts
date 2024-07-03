@@ -4,9 +4,11 @@ import {z} from 'zod';
 import {loginSchema} from '@/app/login/_components/login-schema';
 import {eq} from 'drizzle-orm';
 import {cookies} from 'next/headers';
-import {lucia} from '@/lib/lucia/lucia';
 import {Argon2id} from 'oslo/password';
 import {db} from '@/lib/database/connection';
+import {v4} from "uuid";
+import {sessionCookieName} from "@/lib/auth/validate-session";
+import {sessionTable} from "@/lib/database/tables";
 
 export const login = async (values: z.infer<typeof loginSchema>) => {
     const res = await db.query.userTable.findFirst({
@@ -19,7 +21,7 @@ export const login = async (values: z.infer<typeof loginSchema>) => {
             error: 'User not found',
         };
 
-    const isValidPassword = await new Argon2id().verify(res.hashed_password, values.password);
+    const isValidPassword = await new Argon2id().verify(res.password, values.password);
 
     if (!isValidPassword)
         return {
@@ -27,13 +29,15 @@ export const login = async (values: z.infer<typeof loginSchema>) => {
             error: 'Incorrect email or password',
         };
 
-    const session = await lucia.createSession(res.id, {
-        expiresIn: 60 * 60 * 24 * 30,
+    const sessionPid = v4()
+
+    await db.insert(sessionTable).values({
+        pid: sessionPid,
+        userId: res.id,
+        expiresAt: new Date(Date.now() + 1000 * 60 * 60 * 6), // 6 hours
     });
 
-    const sessionCookie = lucia.createSessionCookie(session.id);
-
-    cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
+    cookies().set(sessionCookieName, sessionPid, {});
 
     return {
         success: true,

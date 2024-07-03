@@ -82,7 +82,8 @@ export function LoginForm() {
                             </FormItem>
                         )}
                     />
-                    <Button type="submit" className={"w-full"} disabled={isLoading}>Submit</Button>
+
+                    <Button type="submit" className={"w-full"} disabled={isLoading}>Login</Button>
                 </form>
             </Form>
             <div className={"flex items-center gap-1 justify-between text-sm mt-[15px]"}>

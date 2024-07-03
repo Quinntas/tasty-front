@@ -4,24 +4,28 @@ import {z} from 'zod';
 import {signupSchema} from '@/app/signup/_components/signup-schema';
 import {Argon2id} from 'oslo/password';
 import {cookies} from 'next/headers';
-import {userTable} from '@/lib/database/tables';
-import {lucia} from '@/lib/lucia/lucia';
-import {v4} from 'uuid';
+import {sessionTable, userTable} from '@/lib/database/tables';
 import {db} from '@/lib/database/connection';
+import {sessionCookieName} from "@/lib/auth/validate-session";
+import {v4} from "uuid";
 
 export const signUp = async (values: z.infer<typeof signupSchema>) => {
+    const sessionPid = v4()
+
     const hashed_password = await new Argon2id().hash(values.password);
-    const userId = v4();
 
     try {
-        await db.insert(userTable).values({
-            id: userId,
-            avatar: 'https://i.imgur.com/WxNkK7J_d.webp?maxwidth=760&fidelity=grand',
-            username: values.username,
+        const user = await db.insert(userTable).values({
             email: values.email,
-            hashed_password: hashed_password,
-            created_at: new Date(),
-            updated_at: new Date(),
+            name: values.name,
+            password: hashed_password,
+            phone: values.phone,
+        }).returning();
+
+        await db.insert(sessionTable).values({
+            pid: sessionPid,
+            userId: user[0].id,
+            expiresAt: new Date(Date.now() + 1000 * 60 * 60 * 6), // 6 hours
         });
     } catch (e: any) {
         return {
@@ -30,18 +34,9 @@ export const signUp = async (values: z.infer<typeof signupSchema>) => {
         };
     }
 
-    const session = await lucia.createSession(userId, {
-        expiresIn: 60 * 60 * 24 * 30,
-    });
-
-    const sessionCookie = lucia.createSessionCookie(session.id);
-
-    cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
+    cookies().set(sessionCookieName, sessionPid, {});
 
     return {
         success: true,
-        data: {
-            userId: userId,
-        },
     };
 };
