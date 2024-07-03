@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/auth/validate-session.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth/validate-session.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/types/types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/_actions/login-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/_actions/login-action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/signup/_actions/signup-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/signup/_actions/signup-action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +139,7 @@
       <workItem from="1719859079704" duration="151000" />
       <workItem from="1719859329875" duration="297000" />
       <workItem from="1719942749570" duration="6333000" />
-      <workItem from="1720030884084" duration="6508000" />
+      <workItem from="1720030884084" duration="7197000" />
     </task>
     <servers />
   </component>
