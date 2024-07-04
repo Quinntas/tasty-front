@@ -3,11 +3,10 @@ import {db} from "@/lib/database/connection";
 import {addressTable, userAddressTable} from "@/lib/database/tables";
 import {eq} from "drizzle-orm";
 
-// TODO
 export const getUserAddresses = cache(async (userId: number) => {
     return db
         .select({
-            addresses: addressTable,
+            address: addressTable,
             isDefault: userAddressTable.isDefault
         })
         .from(userAddressTable)

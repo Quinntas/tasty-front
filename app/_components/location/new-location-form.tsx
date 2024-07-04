@@ -8,15 +8,18 @@ import {z} from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {newLocationFormSchema} from "@/app/_components/location/new-location-form-schema";
 import {useState} from "react";
-import {useRouter} from "next/navigation";
 import {toast} from "sonner";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Button} from "@/components/ui/button";
 import {Pen} from "lucide-react";
+import {createUserAddress} from "@/lib/modules/userAddress/useCases/createUserAddress";
 
-export function NewLocationForm() {
-    const router = useRouter()
+interface NewLocationFormProps {
+    userId?: number
+    closeDrawer: () => void
+}
 
+export function NewLocationForm(props: NewLocationFormProps) {
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [isEditingStreet, setIsEditingStreet] = useState<boolean>(false)
 
@@ -33,18 +36,28 @@ export function NewLocationForm() {
     })
 
     async function onSubmit(values: z.infer<typeof newLocationFormSchema>) {
+        if (!props.userId) return toast("You must be logged in to create a location")
+
         setIsLoading(true)
-        console.log(values)
-        const res = {
-            error: "Error creating location"
-        }
+        
+        const res = await createUserAddress({
+            userId: props.userId,
+            address: {
+                ...values,
+                zipCode: "0"
+            },
+            isDefault: true
+        })
+
         if (res.error) {
-            toast(res.error)
-            setIsLoading(false)
+            toast("An error occurred while creating the location")
         } else {
             toast("Location created successfully")
-            return router.push('/')
         }
+
+        props.closeDrawer()
+
+        setIsLoading(false)
     }
 
     return <Form {...form}>

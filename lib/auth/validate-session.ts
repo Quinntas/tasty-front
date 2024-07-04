@@ -3,10 +3,15 @@ import {cache} from 'react';
 import {db} from "@/lib/database/connection";
 import {sessionTable, userTable} from "@/lib/database/tables";
 import {eq} from "drizzle-orm";
+import {User} from "@/lib/modules/user/domain/user";
 
 export const sessionCookieName = "login:session:pid";
 
-export const validateSession = cache(async () => {
+interface ValidateSessionResponse {
+    user: User | null;
+}
+
+export const validateSession = cache(async (): Promise<ValidateSessionResponse> => {
     const sessionPid = cookies().get(sessionCookieName)
 
     if (!sessionPid)

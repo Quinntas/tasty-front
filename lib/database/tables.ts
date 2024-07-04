@@ -51,6 +51,7 @@ export const addressTable = pgTable('addresses', {
     number: varchar('number', {length: 191}),
     zipCode: varchar('zipCode', {length: 191}).notNull(),
     complement: varchar('complement', {length: 191}),
+    reference: varchar('reference', {length: 191}),
 })
 
 export const storeTable = pgTable('stores', {

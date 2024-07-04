@@ -2,7 +2,7 @@ import {z} from "zod";
 
 export const newLocationFormSchema = z.object({
     street: z.string(),
-    number: z.number().optional(),
+    number: z.string().optional(),
     addressWithoutNumber: z.boolean(),
     neighborhood: z.string(),
     city: z.string(),

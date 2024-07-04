@@ -6,11 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/login/_actions/login-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/_actions/login-action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/signup/_actions/signup-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/signup/_actions/signup-action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_components/location/location.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/location/location.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_components/location/new-location-form-schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/location/new-location-form-schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_components/location/new-location-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/location/new-location-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_components/side-panel/side-panel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/side-panel/side-panel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/auth/validate-session.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth/validate-session.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/database/tables.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/database/tables.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/address/domain/address.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/address/domain/address.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/user/domain/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/user/domain/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/userAdress/domain/userAddress.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/userAddress/domain/userAddress.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/userAdress/useCases/getUserAddresses.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/userAddress/useCases/getUserAddresses.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,29 +68,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.14.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.14.6&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/quintas/Documents/Github/tasty-front&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/quintas/Documents/Github/tasty-front/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "20.14.0",
+    "javascript.nodejs.core.library.typings.version": "20.14.6",
+    "last_opened_file_path": "/home/quintas/Documents/Github/tasty-front/app/_components/side-panel",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/home/quintas/Documents/Github/tasty-front/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -96,6 +102,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/_components/side-panel" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -140,6 +147,7 @@
       <workItem from="1719859329875" duration="297000" />
       <workItem from="1719942749570" duration="6333000" />
       <workItem from="1720030884084" duration="7197000" />
+      <workItem from="1720099236250" duration="3632000" />
     </task>
     <servers />
   </component>

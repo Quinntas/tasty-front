@@ -8,7 +8,7 @@ import {SidePanel} from "@/app/_components/side-panel/side-panel";
 import {Location} from "@/app/_components/location/location";
 import {Suspense} from "react";
 
-export default function Home() {
+export default async function Home() {
     return <>
         <PageBox>
             <Box className={"flex items-center justify-between gap-1"}>
