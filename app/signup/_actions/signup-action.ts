@@ -7,11 +7,12 @@ import {sessionTable, userTable} from '@/lib/database/tables';
 import {db} from '@/lib/database/connection';
 import {sessionCookieName} from "@/lib/auth/validate-session";
 import {v4} from "uuid";
+import {Encryption} from "@/lib/encryption";
 
 export const signUp = async (values: z.infer<typeof signupSchema>) => {
     const sessionPid = v4()
 
-    const hashed_password = values.password
+    const hashed_password = Encryption.encrypt(values.password, process.env.PEPPER!)
 
     try {
         const user = await db.insert(userTable).values({

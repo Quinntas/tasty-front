@@ -51,13 +51,11 @@ export function NewLocationForm(props: NewLocationFormProps) {
 
         if (res.error) {
             toast("An error occurred while creating the location")
+            setIsLoading(false)
         } else {
             toast("Location created successfully")
+            props.closeDrawer()
         }
-
-        props.closeDrawer()
-
-        setIsLoading(false)
     }
 
     return <Form {...form}>

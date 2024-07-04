@@ -20,7 +20,7 @@ export function NewLocationDrawer(props: NewLocationDrawerProps) {
                     <PlusCircle size={20}/>
 
                     <Box className={"flex gap-1 flex-col text-left text-sm font-normal"}>
-                        <span>Add or use current location</span>
+                        <span>Use current location</span>
                         <span>Av. Jose Trajano - Santa Ines, Macapa - AP</span>
                     </Box>
                 </Button>

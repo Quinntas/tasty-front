@@ -40,7 +40,7 @@ export function SidePanelSheet(props: SidePanelSheetProps) {
                     </Avatar>
 
                     <span className={"text-xl font-medium"}>{props.user.name}</span>
-                </Box> : <></>}
+                </Box> : <Link href={"/login"} className={"text-xl font-medium"}>Login</Link>}
 
                 <Box
                     className={"flex flex-col overflow-y-auto no-scrollbar w-full gap-[10px] mt-8 divide-y-[1px] divide-muted-foreground divide-opacity-5"}>
@@ -137,7 +137,7 @@ function SidePanelSection(props: SidePanelSectionProps) {
             {props.children}
             <Box className={"flex flex-col gap-1"}>
                 <span>{props.name}</span>
-                <span className={"text-sm"}>{props.description}</span>
+                {props.description && <span className={"text-sm"}>{props.description}</span>}
             </Box>
         </Box>
         <ChevronRight size={20}/>

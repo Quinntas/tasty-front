@@ -8,6 +8,7 @@ import {db} from '@/lib/database/connection';
 import {v4} from "uuid";
 import {sessionCookieName} from "@/lib/auth/validate-session";
 import {sessionTable} from "@/lib/database/tables";
+import {Encryption} from "@/lib/encryption";
 
 export const login = async (values: z.infer<typeof loginSchema>) => {
     const res = await db.query.userTable.findFirst({
@@ -20,9 +21,9 @@ export const login = async (values: z.infer<typeof loginSchema>) => {
             error: 'User not found',
         };
 
-    const isValidPassword = true;
+    const parsedPassword = Encryption.parseEncryptedString(res.password);
 
-    if (!isValidPassword)
+    if (!Encryption.compare(Encryption.encrypt(values.password, process.env.PEPPER!, parsedPassword.iterations, parsedPassword.salt), res.password))
         return {
             success: false,
             error: 'Incorrect email or password',

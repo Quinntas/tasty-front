@@ -5,26 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/location/location.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/location/location.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/location/new-location-form-schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/location/new-location-form-schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_components/location/location-sheet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/location/location-sheet.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_components/location/new-location-drawer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/location/new-location-drawer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/_components/location/new-location-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/location/new-location-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/side-panel/side-panel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/side-panel/side-panel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/auth/validate-session.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth/validate-session.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/database/tables.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/database/tables.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/address/domain/address.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/address/domain/address.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/user/domain/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/user/domain/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/userAdress/domain/userAddress.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/userAddress/domain/userAddress.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/userAdress/useCases/getUserAddresses.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/userAddress/useCases/getUserAddresses.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_components/side-panel/side-panel-sheet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/side-panel/side-panel-sheet.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/_actions/login-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/_actions/login-action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/signup/_actions/signup-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/signup/_actions/signup-action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/userAddress/useCases/createUserAddress.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/userAddress/useCases/createUserAddress.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/userAddress/useCases/getUserAddresses.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/userAddress/useCases/getUserAddresses.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -76,8 +72,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "20.14.0",
-    "javascript.nodejs.core.library.typings.version": "20.14.6",
+    "javascript.nodejs.core.library.configured.version": "20.9.0",
+    "javascript.nodejs.core.library.typings.version": "20.9.5",
     "last_opened_file_path": "/home/quintas/Documents/Github/tasty-front/app/_components/side-panel",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
@@ -87,7 +83,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/home/quintas/Documents/Github/tasty-front/node_modules/typescript/lib",
+    "ts.external.directory.path": "C:\\Users\\quintas\\Documents\\Gitpica\\tasty-front\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -115,7 +111,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-WS-241.15989.105" />
       </set>
     </attachedChunks>
   </component>
@@ -148,6 +144,7 @@
       <workItem from="1719942749570" duration="6333000" />
       <workItem from="1720030884084" duration="7197000" />
       <workItem from="1720099236250" duration="3632000" />
+      <workItem from="1720103102872" duration="2988000" />
     </task>
     <servers />
   </component>
