@@ -56,6 +56,7 @@ export const addressTable = pgTable('addresses', {
 
 export const storeTable = pgTable('stores', {
     ...baseColumns,
+    slug: varchar('slug', {length: 191}).notNull().unique(),
     banner: text('banner').notNull().default('https://i.imgur.com/WxNkK7J_d.webp?maxwidth=760&fidelity=grand'),
     logo: text('logo').notNull().default('https://i.imgur.com/WxNkK7J_d.webp?maxwidth=760&fidelity=grand'),
     name: varchar('name', {length: 191}).notNull(),

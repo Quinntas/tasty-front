@@ -1,6 +1,7 @@
 "use client"
 
 import {useState} from "react";
+import {Box} from "@/app/_components/box";
 
 type QuantityPickerProps = {
     quantity: number
@@ -29,27 +30,12 @@ export default function QuantityPicker(props: QuantityPickerProps) {
         props.setQuantity(quantity + 1, '+');
     }
 
-    return <div
-        className="relative flex flex-row w-[100px] border-none outline-none h-10 rounded-lg bg-transparent text-background placeholder:text-background">
-        <button
-            onClick={handleDownClick}
-            className="w-20 bg-primary rounded-l border-none outline-none cursor-pointer"
-        >
-            <span className="m-auto text-2xl font-light ">-</span>
-        </button>
-        <input
-            type="number"
-            min={min}
-            disabled={true}
-            className="flex text-background border-none placeholder:text-background bg-primary border-transparent focus:border-transparent focus:ring-0 items-center w-full font-normal text-center  outline-none focus:outline-none text-md "
-            placeholder={String(quantity)}
-        />
-        <button
-            onClick={handleUpClick}
-            className="w-20 outline-none cursor-pointer border-none bg-primary rounded-r"
-        >
-            <span className="m-auto text-2xl font-light ">+</span>
-        </button>
-    </div>
+    return <Box className={"flex items-center h-10 rounded-full bg-main border shadow-light"}>
+        <button onClick={handleDownClick} className={"h-full px-3 "}>-</button>
+        <Box className={"h-full flex items-center min-w-[22px] justify-center "}>
+            <span className={"font-semibold"}>{quantity}</span>
+        </Box>
+        <button onClick={handleUpClick} className={"h-full  px-3 "}>+</button>
+    </Box>
 
 }

@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/location/location-sheet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/location/location-sheet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/location/new-location-drawer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/location/new-location-drawer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/location/new-location-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/location/new-location-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/side-panel/side-panel-sheet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/side-panel/side-panel-sheet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/login/_actions/login-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/_actions/login-action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/signup/_actions/signup-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/signup/_actions/signup-action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/modules/userAddress/useCases/createUserAddress.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/userAddress/useCases/createUserAddress.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/modules/userAddress/useCases/getUserAddresses.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/userAddress/useCases/getUserAddresses.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/quantity-picker.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/quantity-picker.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/sheet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/sheet.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/database/tables.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/database/tables.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,29 +58,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "20.9.0",
-    "javascript.nodejs.core.library.typings.version": "20.9.5",
-    "last_opened_file_path": "/home/quintas/Documents/Github/tasty-front/app/_components/side-panel",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\quintas\\Documents\\Gitpica\\tasty-front\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.9.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.9.5&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/quintas/Documents/Github/tasty-front/app/_components/side-panel&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\quintas\\Documents\\Gitpica\\tasty-front\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -145,6 +139,7 @@
       <workItem from="1720030884084" duration="7197000" />
       <workItem from="1720099236250" duration="3632000" />
       <workItem from="1720103102872" duration="2988000" />
+      <workItem from="1720134051335" duration="9912000" />
     </task>
     <servers />
   </component>
